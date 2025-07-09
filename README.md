@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! 🚀  
 This project showcases my journey, skills, and selected projects as a software engineer and cybersecurity enthusiast.  
 
-Live Demo: [katiebarnes147.github.io](https://katiebarnes147.github.io)
+Live Demo: [katiebarnes147.github.io](https://katiebarnes147.github.io/my-portfolio/)
 
 ---
 
