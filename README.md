@@ -9,8 +9,8 @@ Live Demo: [katiebarnes147.github.io](https://katiebarnes147.github.io/my-portfo
 
 ## 🌟 About Me
 
-Hi! I’m Katie Barnes — a tech enthusiast with a background in criminal justice, digital forensics, and cybersecurity.  
-Currently pursuing my Master's in Computer Science and Software Engineering at Merrimack College, I'm passionate about solving real-world problems through secure, elegant, and efficient code.
+Hi! I’m Katie Barnes — a cybersecurity and digital forensics professional with a unique foundation in criminal justice.
+I earned my M.S. in Computer Science & Software Engineering from Merrimack College, where I specialized in building secure systems and investigating digital threats. I’m passionate about protecting data, uncovering digital evidence, and developing technology that makes an impact.
 
 ---
 
