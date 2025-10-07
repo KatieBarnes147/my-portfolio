@@ -516,3 +516,138 @@ footer {
     text-align: left;
   }
 }
+/* ===== Section separators ===== */
+.section-sep {
+  max-width: 980px;
+  margin: 0 auto;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+/* ===== Hero polish ===== */
+.hero .bio-title {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.hero .bio-text {
+  line-height: var(--line-height);
+  font-size: 1.05rem;
+}
+.hero .bio-text em {
+  display: inline-block;
+  margin-top: 0.35rem;
+}
+
+/* ===== My Background ===== */
+#background {
+  background-color: var(--bg-color);
+  padding: 64px 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+#background h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+#background p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+#background a {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-top: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+#background a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* ===== Skills ===== */
+#skills {
+  padding: 64px 20px;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.skill-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+}
+.skill-card h3 { margin-top: 0; }
+.skill-card ul { margin: 8px 0 0 18px; line-height: 1.8; }
+
+/* ===== Projects ===== */
+#projects {
+  padding: 64px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--primary-color);
+}
+#projects .lead {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.project-card--outline {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px;
+}
+.card-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.card-links a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* ===== Contact spacing ===== */
+#contact { padding: 64px 20px; }
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 720px) {
+  #skills, #projects { padding: 48px 20px; }
+  #background { padding: 40px 16px; }
+  #background h2 { font-size: 1.75rem; }
+  #background p { text-align: left; }
+}
+
