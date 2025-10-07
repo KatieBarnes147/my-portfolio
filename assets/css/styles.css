@@ -464,3 +464,55 @@ footer {
     max-width: 17.75rem;
   }
 }
+/* ===== My Background Section ===== */
+#background {
+  background-color: var(--bg-color);
+  padding: 4rem 1.25rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+#background h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+#background p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+#background a {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-top: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#background a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Responsive tweak for small screens */
+@media screen and (max-width: 720px) {
+  #background {
+    padding: 2.5rem 1rem;
+  }
+
+  #background h2 {
+    font-size: 1.75rem;
+  }
+
+  #background p {
+    text-align: left;
+  }
+}
