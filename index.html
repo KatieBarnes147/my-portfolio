@@ -5,6 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Katie Barnes | Software Engineer • Cybersecurity Specialist</title>
+  <meta name="description" content="Katie Barnes — Software Engineer & Cybersecurity/DFIR specialist. Full-stack projects, secure design, incident response, and digital forensics." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Katie Barnes | Software Engineer • Cybersecurity Specialist" />
+  <meta property="og:description" content="Full-stack projects, secure design, DFIR, and mission-driven public-sector tech." />
+  <meta property="og:image" content="assets/images/katie.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Katie Barnes | Software Engineer • Cybersecurity Specialist" />
+  <meta name="twitter:description" content="Full-stack projects, secure design, DFIR, and mission-driven public-sector tech." />
+  <meta name="twitter:image" content="assets/images/katie.jpg" />
+
   <!--CSS Styles -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -14,52 +30,55 @@
 
   <!-- Animate CSS CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <title>Katie Barnes | Software Engineer | Cybersecurity Specialist</title>
 </head>
 
 <body>
   <!-- Canvas -->
-  <section id="section__canvas">
+  <section id="section__canvas" aria-hidden="true">
     <canvas id="canvas"></canvas>
   </section>
 
   <!-- Navbar -->
   <nav>
-    <h1>KATIE BARNES</h1>
+    <h1 class="logo"><a href="#about" aria-label="Go to top">KATIE BARNES</a></h1>
     <ul class="navigation">
-      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#background" class="nav-link">About</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li class="hide-on-mobile">
+        <a class="btn btn-resume" href="assets/Katie_Barnes_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </li>
     </ul>
-    <button class="burger-menu" id="burger-menu">
-      <ion-icon class="bars" name="menu-outline"></ion-icon>
-      <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
+    <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation">
+      <ion-icon class="bars" name="menu-outline" aria-hidden="true"></ion-icon>
     </button>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="about">
     <img src="assets/images/katie.jpg" alt="Portrait of Katie Barnes" loading="lazy" class="hero-img" />
-    <div class="bio animate__animated animate__shakeX">
-      <h2 class="bio-title">About Me</h2>
+    <div class="bio animate__animated animate__fadeInUp">
+      <h2 class="bio-title">
+        <span class="text-gradient">Hi, I’m Katie.</span>
+      </h2>
       <p class="bio-text">
-        Hi, my name is Katie. I ❤️ Web Development & Cybersecurity.
-        <br>
+        I ❤️ Web Development & Cybersecurity.
+        <br />
         <strong>I graduated in August 2025 with an M.S. in Computer Science & Software Engineering.</strong>
-        <br>
+        <br />
         <em>Versatile across Software Engineering, Cybersecurity/DFIR, and mission-driven public-sector tech.</em>
       </p>
+      <div class="cta-wrap">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-outline" href="assets/Katie_Barnes_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
     </div>
   </section>
 
-  <!-- Separator -->
-  <hr class="section-sep">
-
   <!-- MY BACKGROUND -->
-  <section id="background">
-    <h2>My Background</h2>
+  <section id="background" class="section">
+    <h2 class="section-title">My Background</h2>
     <p>
       I’m a <strong>Software Engineer</strong> and <strong>Cybersecurity Specialist</strong> who bridges the gap between
       <em>secure design</em> and <em>practical delivery</em>.
@@ -74,17 +93,18 @@
       I’m driven by real-world impact — optimizing systems, investigating digital evidence, and designing with a
       security-first mindset. Explore my work below, visit my GitHub, and check out my digital forensics portfolio.
     </p>
-    <a href="https://bu.digication.com/katie-barnes/home" target="_blank" rel="noopener">Boston University Forensics Portfolio</a>
+    <div class="chips">
+      <a class="chip" href="https://bu.digication.com/katie-barnes/home" target="_blank" rel="noopener">
+        Boston University Forensics Portfolio
+      </a>
+    </div>
   </section>
 
-  <!-- Separator -->
-  <hr class="section-sep">
-
   <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <article class="skill-card">
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+    <div class="cards">
+      <article class="card">
         <h3>Languages & Frameworks</h3>
         <ul>
           <li>Python (advanced), Java (intermediate), JavaScript/TypeScript</li>
@@ -92,7 +112,7 @@
         </ul>
       </article>
 
-      <article class="skill-card">
+      <article class="card">
         <h3>Security & Forensics</h3>
         <ul>
           <li>Autopsy, FTK Imager, OSForensics</li>
@@ -101,7 +121,7 @@
         </ul>
       </article>
 
-      <article class="skill-card">
+      <article class="card">
         <h3>DevOps & Tooling</h3>
         <ul>
           <li>Git/GitHub, GitLab CI, Docker (basics)</li>
@@ -112,57 +132,51 @@
     </div>
   </section>
 
-  <!-- Separator -->
-  <hr class="section-sep">
-
   <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <p class="lead">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
 
-    <div class="projects-grid">
-      <article class="project-card--outline">
+    <div class="cards projects-grid">
+      <article class="card project">
         <h3>Event Seat Booking (gRPC + Python)</h3>
         <p>
-          <strong>Challenge:</strong> Prevent double-booking in a concurrent environment.<br>
-          <strong>Approach:</strong> Implemented Python gRPC service with server-side locks and idempotent operations; added unit tests and profiling.<br>
-          <strong>Result:</strong> Eliminated race conditions; <em>reduced booking conflicts to 0</em> in stress tests across 2–3 events with multiple seats.
+          <strong>Challenge:</strong> Prevent double-booking in a concurrent environment.<br />
+          <strong>Approach:</strong> Python gRPC service with server-side locks and idempotent ops; unit tests & profiling.<br />
+          <strong>Result:</strong> Eliminated race conditions; <em>0 booking conflicts</em> in stress tests.
         </p>
       </article>
 
-      <article class="project-card--outline">
+      <article class="card project">
         <h3>Weather Dashboard (React + Maps)</h3>
         <p>
-          <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.<br>
-          <strong>Approach:</strong> React + Vite app integrating Google Maps click-to-query with weather API; added client-side caching and input validation.<br>
-          <strong>Result:</strong> <em>Sub-second</em> map interactions; clear separation of concerns; deployed to GitHub Pages/GitLab Pages.
+          <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.<br />
+          <strong>Approach:</strong> React + Vite app with Google Maps click-to-query; caching & input validation.<br />
+          <strong>Result:</strong> <em>Sub-second</em> map interactions; deployed to Pages.
         </p>
-        <div class="card-links">
-          <a href="https://github.com/KatieBarnes147/Google-Weather-Dashboard/blob/main/index.html" target="_blank" rel="noopener">Code</a>
-          <a href="https://katiebarnes147.github.io/Google-Weather-Dashboard/" target="_blank" rel="noopener">Live Demo</a>
+        <div class="project-links">
+          <a class="btn btn-sm" href="https://github.com/KatieBarnes147/Google-Weather-Dashboard/blob/main/index.html" target="_blank" rel="noopener">Code</a>
+          <a class="btn btn-sm btn-outline" href="https://katiebarnes147.github.io/Google-Weather-Dashboard/" target="_blank" rel="noopener">Live Demo</a>
         </div>
       </article>
 
-      <article class="project-card--outline">
+      <article class="card project">
         <h3>Digital Forensics Lab (Autopsy/FTK/OSF)</h3>
         <p>
-          <strong>Challenge:</strong> Acquire and analyze disk images while preserving chain of custody.<br>
-          <strong>Approach:</strong> Performed acquisition with FTK Imager; analyzed artifacts in Autopsy & OSForensics; documented evidence handling.<br>
-          <strong>Result:</strong> Produced a comprehensive report and repeatable workflow; highlighted <em>key artifacts</em> and timeline reconstruction.
+          <strong>Challenge:</strong> Acquire/analyze disk images while preserving chain of custody.<br />
+          <strong>Approach:</strong> FTK Imager for acquisition; Autopsy & OSForensics for artifact analysis; documented handling.<br />
+          <strong>Result:</strong> Comprehensive report & repeatable workflow; <em>key artifacts</em> and timeline.
         </p>
-        <div class="card-links">
-          <a href="https://github.com/KatieBarnes147/digital-forensics-multi-tool-lab" target="_blank" rel="noopener">Report/Portfolio</a>
+        <div class="project-links">
+          <a class="btn btn-sm" href="https://github.com/KatieBarnes147/digital-forensics-multi-tool-lab" target="_blank" rel="noopener">Report/Portfolio</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- Separator -->
-  <hr class="section-sep">
-
-  <!-- Contact section -->
-  <section class="contact" id="contact">
-    <h2>Get In Touch With Me</h2>
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+    <h2 class="section-title">Get In Touch With Me</h2>
     <div class="contact-form-container">
       <div class="contact-form">
         <form action="https://formspree.io/f/xgeqkgql" method="POST">
@@ -184,33 +198,30 @@
     </div>
   </section>
 
-  <!-- Social accounts - Fixed to the right -->
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/katie-barnes-372028134/" target="_blank">
+  <!-- Socials -->
+  <div class="socials" aria-label="Social links">
+    <a href="https://www.linkedin.com/in/katie-barnes-372028134/" target="_blank" rel="noopener" aria-label="LinkedIn">
       <img src="assets/icons/icons8-linkedin-circled.gif" alt="LinkedIn" loading="lazy" class="socicon" />
     </a>
-    <a href="https://github.com/KatieBarnes147" target="_blank">
+    <a href="https://github.com/KatieBarnes147" target="_blank" rel="noopener" aria-label="GitHub">
       <img src="assets/icons/icons8-github.gif" alt="GitHub" class="socicon" />
     </a>
   </div>
 
   <!-- Scroll to top -->
-  <i class="scroll-up" id="scroll-up">
-    <img src="assets/icons/icons8-upward-arrow.gif" class="socicon up-arrow" alt="Scroll to top" />
-  </i>
+  <button class="scroll-up" id="scroll-up" aria-label="Scroll to top">
+    <img src="assets/icons/icons8-upward-arrow.gif" class="socicon up-arrow" alt="" />
+  </button>
 
-  <!-- Footer section -->
+  <!-- Footer -->
   <footer>
     <p class="copy">&copy; Copyright 2025</p>
-    <p class="copy">Built with &#x2661; by <a>Katie Barnes</a></p>
+    <p class="copy">Built with &#x2661; by <a href="#about">Katie Barnes</a></p>
   </footer>
 
-  <!-- Website scripts -->
+  <!-- Scripts -->
   <script src="assets/js/app.js"></script>
-
-  <!-- Ion icons scripts -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="js/index.js"></script>
 </body>
 </html>
