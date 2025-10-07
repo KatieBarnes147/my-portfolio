@@ -1,40 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--CSS Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.ico?v=2" />
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Katie Barnes | Software Engineer</title>
+</head>
+
+<body>
+  <!-- Canvas -->
+  <section height=100vh id="section__canvas">
+    <canvas id="canvas"></canvas>
+  </section>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>KATIE BARNES</h1>
+    <ul class="navigation">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="burger-menu" id="burger-menu">
+      <ion-icon class="bars" name="menu-outline"></ion-icon>
+      <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
+    </button>
+  </nav>
+
   <!-- Hero Section -->
   <section class="hero" id="about">
     <img src="assets/images/katie.jpg" alt="katie-barnes" loading="lazy" class="hero-img" />
     <div class="bio animate__animated animate__shakeX">
       <h2 class="bio-title">About Me</h2>
       <p class="bio-text">
-        I’m <strong>Katie Barnes</strong> — a software engineer and cybersecurity specialist who bridges the gap between secure design and practical delivery.
+        Hi, my name is Katie. I ❤️ Web Development & Cybersecurity.
       </p>
     </div>
   </section>
 
-  <!-- More about -->
-  <section class="more-about">
-    <h2>More About Me</h2>
-    <p>
-      I hold an <strong>M.S. in Computer Science & Software Engineering</strong> (2025) and a
-      <strong>Graduate Certificate in Cybersecurity & Cyber Investigations</strong>. My journey started in criminal justice and grew into a passion for technology, digital forensics, and secure application development.
-    </p>
+<!-- ===== ABOUT ME ===== -->
+<section id="about" style="padding: 64px 20px; max-width: 980px; margin: 0 auto;">
+  <h2 style="font-size: 2rem; margin-bottom: 16px;">About Me</h2>
+  <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+    I’m <strong>Katie Barnes</strong> — a software engineer and cybersecurity specialist who bridges the gap between
+    <em>secure design</em> and <em>practical delivery</em>.
+  </p>
+  <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+    I hold an <strong>M.S. in Computer Science & Software Engineering</strong> (2025) and a
+    <strong>Graduate Certificate in Cybersecurity & Cyber Investigations</strong>. My hands-on work spans
+    secure application development, digital forensics, and incident response. I’ve built full‑stack projects with
+    Python, Java, React, and SQL, and performed forensic analysis using Autopsy, FTK Imager, and OSForensics.
+  </p>
+  <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+    I’m driven by real-world impact — optimizing systems, investigating digital evidence, and designing with a
+    security‑first mindset. Explore my work below, visit my GitHub, and check out my digital forensics portfolio.
+  </p>
+  <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px;">
+    <a href="https://github.com/KatieBarnes147" target="_blank" rel="noopener" style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">GitHub</a>
+    <a href="YOUR-LINKEDIN-URL" target="_blank" rel="noopener" style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">LinkedIn</a>
+    <a href="URL-TO-FORensics-PORTFOLIO" target="_blank" rel="noopener" style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Forensics Portfolio</a>
+  </div>
+</section>
 
-    <p>
-      My hands-on work spans secure application development, forensic analysis, and incident response. I’ve built full-stack projects with Python, Java, React, and SQL, and worked with forensic tools like Autopsy, FTK Imager, and OSForensics.
-    </p>
+<hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
 
-    <ul>
-      <li><b>Cybersecurity & Digital Forensics:</b> Incident response, malware analysis, and forensic investigations using Autopsy, FTK Imager, and OSForensics.</li>
-      <li><b>Full-Stack Engineering:</b> Developing scalable applications with Python, Java, React, SQL, and secure API design.</li>
-      <li><b>Cyber Defense & Research:</b> Exploring secure systems, vulnerability assessments, and modern software design practices.</li>
-    </ul>
+ <!-- ===== SKILLS ===== -->
+<section id="skills" style="padding: 64px 20px; max-width: 980px; margin: 0 auto;">
+  <h2 style="font-size: 2rem; margin-bottom: 16px;">Skills</h2>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
 
-    <p>
-      I’m passionate about applying my skills to real-world challenges—whether that’s building secure applications, investigating digital evidence, or supporting transparency through technology.
-    </p>
+    <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
+      <h3 style="margin-top:0;">Languages & Frameworks</h3>
+      <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+        <li>Python (advanced), Java (intermediate), JavaScript/TypeScript</li>
+        <li>React, Node.js, SQL (PostgreSQL/MySQL), REST APIs</li>
+      </ul>
+    </article>
 
-    <p>
-      👉 Explore my work on 
-      <a href="https://github.com/KatieBarnes147" target="_blank" rel="noopener">GitHub</a> 
-      and check out my 
-      <a href="https://bu.digication.com/katie-barnes/home/" target="_blank" rel="noopener">Digital Forensics Portfolio</a>.
-    </p>
+    <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
+      <h3 style="margin-top:0;">Security & Forensics</h3>
+      <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+        <li>Autopsy, FTK Imager, OSForensics</li>
+        <li>Incident Response, Chain of Custody, Evidence Handling</li>
+        <li>Secure Coding, Basic Threat Modeling, Log Analysis</li>
+      </ul>
+    </article>
+
+    <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
+      <h3 style="margin-top:0;">DevOps & Tooling</h3>
+      <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+        <li>Git/GitHub, GitLab CI, Docker (basics)</li>
+        <li>Linux, Bash, VS Code, Postman</li>
+        <li>Cloud basics (AWS: S3/Lambda/EC2 concepts)</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
+
+  <!-- Projects section -->
+      <!-- Project Card 1 -->
+    <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
+      <h3 style="margin-top:0;">Event Seat Booking (gRPC + Python)</h3>
+      <p style="line-height:1.7;">
+        <strong>Challenge:</strong> Prevent double‑booking in a concurrent environment.
+        <br/>
+        <strong>Approach:</strong> Implemented Python gRPC service with server‑side locks and idempotent operations; added unit tests and profiling.
+        <br/>
+        <strong>Result:</strong> Eliminated race conditions; <em>reduced booking conflicts to 0</em> in stress tests across 2–3 events with multiple seats.
+      </p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="URL-TO-REPO" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Code</a>
+        <a href="URL-TO-README-or-DEMO" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">README</a>
+      </div>
+    </article>
+
+    <!-- Project Card 2 -->
+    <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
+      <h3 style="margin-top:0;">Weather Dashboard (React + Maps)</h3>
+      <p style="line-height:1.7;">
+        <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.
+        <br/>
+        <strong>Approach:</strong> React + Vite app integrating Google Maps click‑to‑query with weather API; added client‑side caching and input validation.
+        <br/>
+        <strong>Result:</strong> <em>Sub‑second</em> map interactions; clear separation of concerns; deployed to GitHub Pages/GitLab Pages.
+      </p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="URL-TO-REPO" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Code</a>
+        <a href="URL-TO-LIVE-DEMO" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Live Demo</a>
+      </div>
+    </article>
+
+    <!-- Project Card 3 -->
+    <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
+      <h3 style="margin-top:0;">Digital Forensics Lab (Autopsy/FTK/OSF)</h3>
+      <p style="line-height:1.7;">
+        <strong>Challenge:</strong> Acquire and analyze disk images while preserving chain of custody.
+        <br/>
+        <strong>Approach:</strong> Performed acquisition with FTK Imager; analyzed artifacts in Autopsy & OSForensics; documented evidence handling.
+        <br/>
+        <strong>Result:</strong> Produced a comprehensive report and repeatable workflow; highlighted <em>key artifacts</em> and timeline reconstruction.
+      </p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="URL-TO-REPORT-or-PORTFOLIO" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Report/Portfolio</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
+
+  <section class="projects" id="projects">
+    <h2 class="projects-title"> Some Cool Projects</h2>
+    <div class="projects-container">
+      <div class="project-container project-card">
+        <img src="assets/images/screenshot.png" alt="mock-website" loading="lazy" class="project-pic" />
+        <h3 class="project-title">Mock Website</h3>
+        <p class="project-details">
+          I made a mock website of what a Frontend Developer Bootcamp might look like.
+          I used HTML, CSS, JavaScript and Bootstrap to create a simple website.
+          Click the link below to view my website.
+        </p>
+        <a href="https://katiebarnes147.github.io/bootstrap-mock-website/" target="_blank" class="project-link">Check it
+          Out</a>
+      </div>
+      <div class="project-container project-card">
+        <img src="assets/images/cyber.png" alt="cyber-security-project" loading="lazy" class="project-pic" />
+        <h3 class="project-title">Boston University Portfolio</h3>
+        <p class="project-details">
+          This portfolio showcases hands-on projects in cybersecurity, digital
+          forensics, and cyber investigations. This collection includes real-world labs, investigative reports, tool
+          documentation, and analysis artifacts.
+        </p>
+        <a href="https://bu.digication.com/katie-barnes/home/" target="_blank" class="project-link">Check it Out</a>
+      </div>
+    </div>
   </section>
+
+  <!-- Contact section -->
+  <section class="contact" id="contact">
+    <h2>Get In Touch With Me</h2>
+    <div class="contact-form-container">
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xgeqkgql" method="POST">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field"
+              required />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field"
+              required />
+          </div>
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
+              class="input-field" required></textarea>
+          </div>
+          <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social accounts - Fixed to the right -->
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/katie-barnes-372028134/" target="_blank"><img
+        src="assets/icons/icons8-linkedin-circled.gif" alt="Linkedin" loading="lazy" class="socicon" /></a>
+    <a href="https://github.com/KatieBarnes147" target="_blank"><img src="assets/icons/icons8-github.gif" alt="Github"
+        class="socicon" /></a>
+  </div>
+
+  <!-- Scroll to top -->
+  <i class="scroll-up" id="scroll-up"><img src="assets/icons/icons8-upward-arrow.gif" class="socicon up-arrow" alt="" />
+  </i>
+
+  <!-- Footer section -->
+  <footer>
+    <p class="copy">&copy; Copyright 2025</p>
+    <p class="copy">
+      Built with &#x2661; by
+      <a>Katie Barnes</a>
+    </p>
+  </footer>
+
+  <!-- Website scripts -->
+  <script src="assets/js/app.js"></script>
+
+  <!-- Ion icons scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="js/index.js"></script>
+
+  
+</body>
+
+</html>
