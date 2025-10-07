@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,12 +14,13 @@
 
   <!-- Animate CSS CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <title>Katie Barnes | Software Engineer</title>
 </head>
 
 <body>
   <!-- Canvas -->
-  <section height=100vh id="section__canvas">
+  <section id="section__canvas" style="height: 100vh;">
     <canvas id="canvas"></canvas>
   </section>
 
@@ -41,128 +41,134 @@
 
   <!-- Hero Section -->
   <section class="hero" id="about">
-    <img src="assets/images/katie.jpg" alt="katie-barnes" loading="lazy" class="hero-img" />
+    <img src="assets/images/katie.jpg" alt="Portrait of Katie Barnes" loading="lazy" class="hero-img" />
     <div class="bio animate__animated animate__shakeX">
       <h2 class="bio-title">About Me</h2>
       <p class="bio-text">
         Hi, my name is Katie. I ❤️ Web Development & Cybersecurity.
+        <br>
+        <strong>I graduated in August 2025 with an M.S. in Computer Science & Software Engineering.</strong>
+        <br>
+        <em>Versatile across Software Engineering, Cybersecurity/DFIR, and mission-driven public-sector tech.</em>
       </p>
     </div>
   </section>
 
-<!-- ===== ABOUT ME ===== -->
-<section id="about" style="padding: 64px 20px; max-width: 980px; margin: 0 auto;">
-  <h2 style="font-size: 2rem; margin-bottom: 16px;">About Me</h2>
-  <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
-    I’m <strong>Katie Barnes</strong> — a software engineer and cybersecurity specialist who bridges the gap between
-    <em>secure design</em> and <em>practical delivery</em>.
-  </p>
-  <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
-    I hold an <strong>M.S. in Computer Science & Software Engineering</strong> (2025) and a
-    <strong>Graduate Certificate in Cybersecurity & Cyber Investigations</strong>. My hands-on work spans
-    secure application development, digital forensics, and incident response. I’ve built full‑stack projects with
-    Python, Java, React, and SQL, and performed forensic analysis using Autopsy, FTK Imager, and OSForensics.
-  </p>
-  <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
-    I’m driven by real-world impact — optimizing systems, investigating digital evidence, and designing with a
-    security‑first mindset. Explore my work below, visit my GitHub, and check out my digital forensics portfolio.
-  </p>
-  <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px;">
-    <a href="https://github.com/KatieBarnes147" target="_blank" rel="noopener" style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">GitHub</a>
-    <a href="www.linkedin.com/in/katie-barnes-372028134" target="_blank" rel="noopener" style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">LinkedIn</a>
-    <a href="https://bu.digication.com/katie-barnes/home" target="_blank" rel="noopener" style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Forensics Portfolio</a>
-  </div>
-</section>
+  <!-- MY BACKGROUND -->
+  <section id="background" style="padding: 64px 20px; max-width: 980px; margin: 0 auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 16px;">My Background</h2>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+      I’m a software engineer and cybersecurity specialist who bridges the gap between
+      <em>secure design</em> and <em>practical delivery</em>.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+      I hold an <strong>M.S. in Computer Science & Software Engineering</strong> (2025) and a
+      <strong>Graduate Certificate in Cybersecurity & Cyber Investigations</strong>. My hands-on work spans
+      secure application development, digital forensics, and incident response. I’ve built full-stack projects with
+      Python, Java, React, and SQL, and performed forensic analysis using Autopsy, FTK Imager, and OSForensics.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+      I’m driven by real-world impact — optimizing systems, investigating digital evidence, and designing with a
+      security-first mindset. Explore my work below, visit my GitHub, and check out my digital forensics portfolio.
+    </p>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px;">
+      <a href="https://bu.digication.com/katie-barnes/home" target="_blank" rel="noopener"
+         style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">
+         Boston University Forensics Portfolio
+      </a>
+    </div>
+  </section>
 
-<hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
+  <hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
 
- <!-- ===== SKILLS ===== -->
-<section id="skills" style="padding: 64px 20px; max-width: 980px; margin: 0 auto;">
-  <h2 style="font-size: 2rem; margin-bottom: 16px;">Skills</h2>
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+  <!-- SKILLS -->
+  <section id="skills" style="padding: 64px 20px; max-width: 980px; margin: 0 auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 16px;">Skills</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+      <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
+        <h3 style="margin-top:0;">Languages & Frameworks</h3>
+        <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+          <li>Python (advanced), Java (intermediate), JavaScript/TypeScript</li>
+          <li>React, Node.js, SQL (PostgreSQL/MySQL), REST APIs</li>
+        </ul>
+      </article>
 
-    <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
-      <h3 style="margin-top:0;">Languages & Frameworks</h3>
-      <ul style="margin: 8px 0 0 18px; line-height:1.8;">
-        <li>Python (advanced), Java (intermediate), JavaScript/TypeScript</li>
-        <li>React, Node.js, SQL (PostgreSQL/MySQL), REST APIs</li>
-      </ul>
-    </article>
+      <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
+        <h3 style="margin-top:0;">Security & Forensics</h3>
+        <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+          <li>Autopsy, FTK Imager, OSForensics</li>
+          <li>Incident Response, Chain of Custody, Evidence Handling</li>
+          <li>Secure Coding, Basic Threat Modeling, Log Analysis</li>
+        </ul>
+      </article>
 
-    <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
-      <h3 style="margin-top:0;">Security & Forensics</h3>
-      <ul style="margin: 8px 0 0 18px; line-height:1.8;">
-        <li>Autopsy, FTK Imager, OSForensics</li>
-        <li>Incident Response, Chain of Custody, Evidence Handling</li>
-        <li>Secure Coding, Basic Threat Modeling, Log Analysis</li>
-      </ul>
-    </article>
+      <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
+        <h3 style="margin-top:0;">DevOps & Tooling</h3>
+        <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+          <li>Git/GitHub, GitLab CI, Docker (basics)</li>
+          <li>Linux, Bash, VS Code, Postman</li>
+          <li>Cloud basics (AWS: S3/Lambda/EC2 concepts)</li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
-    <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
-      <h3 style="margin-top:0;">DevOps & Tooling</h3>
-      <ul style="margin: 8px 0 0 18px; line-height:1.8;">
-        <li>Git/GitHub, GitLab CI, Docker (basics)</li>
-        <li>Linux, Bash, VS Code, Postman</li>
-        <li>Cloud basics (AWS: S3/Lambda/EC2 concepts)</li>
-      </ul>
-    </article>
+  <hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
 
-  </div>
-</section>
+  <!-- PROJECTS -->
+  <section id="projects" style="padding: 64px 20px; max-width: 1100px; margin: 0 auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 16px;">Projects</h2>
+    <p style="margin: 0 0 20px 0;">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
 
-<hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
 
-  <!-- Projects section -->
-  <section class="projects" id="projects">
-    <h2 class="projects-title"> Some Cool Projects</h2>
       <!-- Project Card 1 -->
-    <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
-      <h3 style="margin-top:0;">Event Seat Booking (gRPC + Python)</h3>
-      <p style="line-height:1.7;">
-        <strong>Challenge:</strong> Prevent double‑booking in a concurrent environment.
-        <br/>
-        <strong>Approach:</strong> Implemented Python gRPC service with server‑side locks and idempotent operations; added unit tests and profiling.
-        <br/>
-        <strong>Result:</strong> Eliminated race conditions; <em>reduced booking conflicts to 0</em> in stress tests across 2–3 events with multiple seats.
-      </p>
-    </article>
+      <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
+        <h3 style="margin-top:0;">Event Seat Booking (gRPC + Python)</h3>
+        <p style="line-height:1.7;">
+          <strong>Challenge:</strong> Prevent double-booking in a concurrent environment.
+          <br/>
+          <strong>Approach:</strong> Implemented Python gRPC service with server-side locks and idempotent operations; added unit tests and profiling.
+          <br/>
+          <strong>Result:</strong> Eliminated race conditions; <em>reduced booking conflicts to 0</em> in stress tests across 2–3 events with multiple seats.
+        </p>
+      </article>
 
-    <!-- Project Card 2 -->
-    <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
-      <h3 style="margin-top:0;">Weather Dashboard (React + Maps)</h3>
-      <p style="line-height:1.7;">
-        <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.
-        <br/>
-        <strong>Approach:</strong> React + Vite app integrating Google Maps click‑to‑query with weather API; added client‑side caching and input validation.
-        <br/>
-        <strong>Result:</strong> <em>Sub‑second</em> map interactions; clear separation of concerns; deployed to GitHub Pages/GitLab Pages.
-      </p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="URL-TO-REPO" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Code</a>
-        <a href="https://katiebarnes147.github.io/Google-Weather-Dashboard/" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Live Demo</a>
-      </div>
-    </article>
+      <!-- Project Card 2 -->
+      <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
+        <h3 style="margin-top:0;">Weather Dashboard (React + Maps)</h3>
+        <p style="line-height:1.7;">
+          <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.
+          <br/>
+          <strong>Approach:</strong> React + Vite app integrating Google Maps click-to-query with weather API; added client-side caching and input validation.
+          <br/>
+          <strong>Result:</strong> <em>Sub-second</em> map interactions; clear separation of concerns; deployed to GitHub Pages/GitLab Pages.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="https://github.com/KatieBarnes147/Google-Weather-Dashboard/blob/main/index.html" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Code</a>
+          <a href="https://katiebarnes147.github.io/Google-Weather-Dashboard/" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Live Demo</a>
+        </div>
+      </article>
 
-    <!-- Project Card 3 -->
-    <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
-      <h3 style="margin-top:0;">Digital Forensics Lab (Autopsy/FTK/OSF)</h3>
-      <p style="line-height:1.7;">
-        <strong>Challenge:</strong> Acquire and analyze disk images while preserving chain of custody.
-        <br/>
-        <strong>Approach:</strong> Performed acquisition with FTK Imager; analyzed artifacts in Autopsy & OSForensics; documented evidence handling.
-        <br/>
-        <strong>Result:</strong> Produced a comprehensive report and repeatable workflow; highlighted <em>key artifacts</em> and timeline reconstruction.
-      </p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="https://github.com/KatieBarnes147/digital-forensics-multi-tool-lab" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Report/Portfolio</a>
-      </div>
-    </article>
+      <!-- Project Card 3 -->
+      <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
+        <h3 style="margin-top:0;">Digital Forensics Lab (Autopsy/FTK/OSF)</h3>
+        <p style="line-height:1.7;">
+          <strong>Challenge:</strong> Acquire and analyze disk images while preserving chain of custody.
+          <br/>
+          <strong>Approach:</strong> Performed acquisition with FTK Imager; analyzed artifacts in Autopsy & OSForensics; documented evidence handling.
+          <br/>
+          <strong>Result:</strong> Produced a comprehensive report and repeatable workflow; highlighted <em>key artifacts</em> and timeline reconstruction.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="https://github.com/KatieBarnes147/digital-forensics-multi-tool-lab" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Report/Portfolio</a>
+        </div>
+      </article>
 
-  </div>
-</section>
+    </div>
+  </section>
 
-<hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
-</section>
+  <hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
 
   <!-- Contact section -->
   <section class="contact" id="contact">
@@ -172,18 +178,15 @@
         <form action="https://formspree.io/f/xgeqkgql" method="POST">
           <div class="form-control">
             <label for="name">Name</label>
-            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field"
-              required />
+            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field" required />
           </div>
           <div class="form-control">
             <label for="email">Email</label>
-            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field"
-              required />
+            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field" required />
           </div>
           <div class="form-control">
             <label for="message">Message</label>
-            <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
-              class="input-field" required></textarea>
+            <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message" class="input-field" required></textarea>
           </div>
           <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
         </form>
@@ -193,22 +196,24 @@
 
   <!-- Social accounts - Fixed to the right -->
   <div class="socials">
-    <a href="https://www.linkedin.com/in/katie-barnes-372028134/" target="_blank"><img
-        src="assets/icons/icons8-linkedin-circled.gif" alt="Linkedin" loading="lazy" class="socicon" /></a>
-    <a href="https://github.com/KatieBarnes147" target="_blank"><img src="assets/icons/icons8-github.gif" alt="Github"
-        class="socicon" /></a>
+    <a href="https://www.linkedin.com/in/katie-barnes-372028134/" target="_blank">
+      <img src="assets/icons/icons8-linkedin-circled.gif" alt="LinkedIn" loading="lazy" class="socicon" />
+    </a>
+    <a href="https://github.com/KatieBarnes147" target="_blank">
+      <img src="assets/icons/icons8-github.gif" alt="GitHub" class="socicon" />
+    </a>
   </div>
 
   <!-- Scroll to top -->
-  <i class="scroll-up" id="scroll-up"><img src="assets/icons/icons8-upward-arrow.gif" class="socicon up-arrow" alt="" />
+  <i class="scroll-up" id="scroll-up">
+    <img src="assets/icons/icons8-upward-arrow.gif" class="socicon up-arrow" alt="Scroll to top" />
   </i>
 
   <!-- Footer section -->
   <footer>
     <p class="copy">&copy; Copyright 2025</p>
     <p class="copy">
-      Built with &#x2661; by
-      <a>Katie Barnes</a>
+      Built with &#x2661; by <a>Katie Barnes</a>
     </p>
   </footer>
 
@@ -219,8 +224,5 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="js/index.js"></script>
-
-  
 </body>
-
 </html>
