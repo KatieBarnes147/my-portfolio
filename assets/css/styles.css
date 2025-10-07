@@ -650,4 +650,25 @@ footer {
   #background h2 { font-size: 1.75rem; }
   #background p { text-align: left; }
 }
+/* Canvas as a non-layout background */
+#section__canvas {
+  position: fixed;
+  inset: 0;
+  height: 0 !important;   /* ensures no layout space even if inline style slips back in */
+  pointer-events: none;
+  z-index: 0;
+}
+#canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+/* Make sure content sits above the canvas */
+.hero, #background, #skills, #projects, #contact, footer {
+  position: relative;
+  z-index: 1;
+}
 
