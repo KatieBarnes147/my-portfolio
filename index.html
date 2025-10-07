@@ -28,7 +28,7 @@
   <nav>
     <h1>KATIE BARNES</h1>
     <ul class="navigation">
-      <li><a href="#background" class="nav-link">About</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -54,57 +54,56 @@
     </div>
   </section>
 
+  <!-- Separator -->
+  <hr class="section-sep">
+
   <!-- MY BACKGROUND -->
-  <section id="background" style="padding: 64px 20px; max-width: 980px; margin: 0 auto;">
-    <h2 style="font-size: 2rem; margin-bottom: 16px;">My Background</h2>
-    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+  <section id="background">
+    <h2>My Background</h2>
+    <p>
       I’m a <strong>Software Engineer</strong> and <strong>Cybersecurity Specialist</strong> who bridges the gap between
       <em>secure design</em> and <em>practical delivery</em>.
     </p>
-    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+    <p>
       I hold an <strong>M.S. in Computer Science & Software Engineering</strong> (2025) and a
       <strong>Graduate Certificate in Cybersecurity & Cyber Investigations</strong>. My hands-on work spans
       secure application development, digital forensics, and incident response. I’ve built full-stack projects with
       Python, Java, React, and SQL, and performed forensic analysis using Autopsy, FTK Imager, and OSForensics.
     </p>
-    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0 0 12px 0;">
+    <p>
       I’m driven by real-world impact — optimizing systems, investigating digital evidence, and designing with a
       security-first mindset. Explore my work below, visit my GitHub, and check out my digital forensics portfolio.
     </p>
-    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px;">
-      <a href="https://bu.digication.com/katie-barnes/home" target="_blank" rel="noopener"
-         style="padding:10px 14px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">
-         Boston University Forensics Portfolio
-      </a>
-    </div>
+    <a href="https://bu.digication.com/katie-barnes/home" target="_blank" rel="noopener">Boston University Forensics Portfolio</a>
   </section>
 
-  <hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
+  <!-- Separator -->
+  <hr class="section-sep">
 
   <!-- SKILLS -->
-  <section id="skills" style="padding: 64px 20px; max-width: 980px; margin: 0 auto;">
-    <h2 style="font-size: 2rem; margin-bottom: 16px;">Skills</h2>
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
-      <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
-        <h3 style="margin-top:0;">Languages & Frameworks</h3>
-        <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <article class="skill-card">
+        <h3>Languages & Frameworks</h3>
+        <ul>
           <li>Python (advanced), Java (intermediate), JavaScript/TypeScript</li>
           <li>React, Node.js, SQL (PostgreSQL/MySQL), REST APIs</li>
         </ul>
       </article>
 
-      <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
-        <h3 style="margin-top:0;">Security & Forensics</h3>
-        <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+      <article class="skill-card">
+        <h3>Security & Forensics</h3>
+        <ul>
           <li>Autopsy, FTK Imager, OSForensics</li>
           <li>Incident Response, Chain of Custody, Evidence Handling</li>
           <li>Secure Coding, Basic Threat Modeling, Log Analysis</li>
         </ul>
       </article>
 
-      <article style="border:1px solid #eee; border-radius:12px; padding:16px;">
-        <h3 style="margin-top:0;">DevOps & Tooling</h3>
-        <ul style="margin: 8px 0 0 18px; line-height:1.8;">
+      <article class="skill-card">
+        <h3>DevOps & Tooling</h3>
+        <ul>
           <li>Git/GitHub, GitLab CI, Docker (basics)</li>
           <li>Linux, Bash, VS Code, Postman</li>
           <li>Cloud basics (AWS: S3/Lambda/EC2 concepts)</li>
@@ -113,62 +112,53 @@
     </div>
   </section>
 
-  <hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
+  <!-- Separator -->
+  <hr class="section-sep">
 
   <!-- PROJECTS -->
-  <section id="projects" style="padding: 64px 20px; max-width: 1100px; margin: 0 auto;">
-    <h2 style="font-size: 2rem; margin-bottom: 16px;">Projects</h2>
-    <p style="margin: 0 0 20px 0;">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="lead">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
 
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
-
-      <!-- Project Card 1 -->
-      <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
-        <h3 style="margin-top:0;">Event Seat Booking (gRPC + Python)</h3>
-        <p style="line-height:1.7;">
-          <strong>Challenge:</strong> Prevent double-booking in a concurrent environment.
-          <br/>
-          <strong>Approach:</strong> Implemented Python gRPC service with server-side locks and idempotent operations; added unit tests and profiling.
-          <br/>
+    <div class="projects-grid">
+      <article class="project-card--outline">
+        <h3>Event Seat Booking (gRPC + Python)</h3>
+        <p>
+          <strong>Challenge:</strong> Prevent double-booking in a concurrent environment.<br>
+          <strong>Approach:</strong> Implemented Python gRPC service with server-side locks and idempotent operations; added unit tests and profiling.<br>
           <strong>Result:</strong> Eliminated race conditions; <em>reduced booking conflicts to 0</em> in stress tests across 2–3 events with multiple seats.
         </p>
       </article>
 
-      <!-- Project Card 2 -->
-      <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
-        <h3 style="margin-top:0;">Weather Dashboard (React + Maps)</h3>
-        <p style="line-height:1.7;">
-          <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.
-          <br/>
-          <strong>Approach:</strong> React + Vite app integrating Google Maps click-to-query with weather API; added client-side caching and input validation.
-          <br/>
+      <article class="project-card--outline">
+        <h3>Weather Dashboard (React + Maps)</h3>
+        <p>
+          <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.<br>
+          <strong>Approach:</strong> React + Vite app integrating Google Maps click-to-query with weather API; added client-side caching and input validation.<br>
           <strong>Result:</strong> <em>Sub-second</em> map interactions; clear separation of concerns; deployed to GitHub Pages/GitLab Pages.
         </p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a href="https://github.com/KatieBarnes147/Google-Weather-Dashboard/blob/main/index.html" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Code</a>
-          <a href="https://katiebarnes147.github.io/Google-Weather-Dashboard/" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Live Demo</a>
+        <div class="card-links">
+          <a href="https://github.com/KatieBarnes147/Google-Weather-Dashboard/blob/main/index.html" target="_blank" rel="noopener">Code</a>
+          <a href="https://katiebarnes147.github.io/Google-Weather-Dashboard/" target="_blank" rel="noopener">Live Demo</a>
         </div>
       </article>
 
-      <!-- Project Card 3 -->
-      <article style="border:1px solid #eee; border-radius:14px; padding:18px;">
-        <h3 style="margin-top:0;">Digital Forensics Lab (Autopsy/FTK/OSF)</h3>
-        <p style="line-height:1.7;">
-          <strong>Challenge:</strong> Acquire and analyze disk images while preserving chain of custody.
-          <br/>
-          <strong>Approach:</strong> Performed acquisition with FTK Imager; analyzed artifacts in Autopsy & OSForensics; documented evidence handling.
-          <br/>
+      <article class="project-card--outline">
+        <h3>Digital Forensics Lab (Autopsy/FTK/OSF)</h3>
+        <p>
+          <strong>Challenge:</strong> Acquire and analyze disk images while preserving chain of custody.<br>
+          <strong>Approach:</strong> Performed acquisition with FTK Imager; analyzed artifacts in Autopsy & OSForensics; documented evidence handling.<br>
           <strong>Result:</strong> Produced a comprehensive report and repeatable workflow; highlighted <em>key artifacts</em> and timeline reconstruction.
         </p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a href="https://github.com/KatieBarnes147/digital-forensics-multi-tool-lab" target="_blank" rel="noopener" style="padding:8px 12px; border:1px solid #ddd; border-radius:10px; text-decoration:none;">Report/Portfolio</a>
+        <div class="card-links">
+          <a href="https://github.com/KatieBarnes147/digital-forensics-multi-tool-lab" target="_blank" rel="noopener">Report/Portfolio</a>
         </div>
       </article>
-
     </div>
   </section>
 
-  <hr style="max-width: 980px; margin: 0 auto; border: none; border-top: 1px solid #eee;"/>
+  <!-- Separator -->
+  <hr class="section-sep">
 
   <!-- Contact section -->
   <section class="contact" id="contact">
@@ -212,9 +202,7 @@
   <!-- Footer section -->
   <footer>
     <p class="copy">&copy; Copyright 2025</p>
-    <p class="copy">
-      Built with &#x2661; by <a>Katie Barnes</a>
-    </p>
+    <p class="copy">Built with &#x2661; by <a>Katie Barnes</a></p>
   </footer>
 
   <!-- Website scripts -->
