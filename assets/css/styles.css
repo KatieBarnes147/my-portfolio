@@ -222,3 +222,80 @@ footer{
 @media (max-width: 420px){
   .btn{ padding:.55rem .85rem; }
 }
+/* --- Scroll-to-top fade/slide in --- */
+.scroll-up {
+  opacity: 0;
+  transform: translateY(8px) scale(.98);
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease, background var(--speed), transform var(--speed);
+}
+.scroll-up.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* --- Reveal-on-scroll --- */
+.reveal { 
+  opacity: 0; 
+  transform: translateY(10px) scale(.99);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.revealed { 
+  opacity: 1; 
+  transform: translateY(0) scale(1);
+}
+
+/* --- Project card micro-interaction --- */
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px var(--shadow);
+  border-color: rgba(255,255,255,.14);
+}
+.card::after {
+  content: "";
+  position: absolute; inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 180deg,
+    transparent 0deg,
+    rgba(124,247,221,.25) 80deg,
+    rgba(108,140,255,.25) 140deg,
+    rgba(255,122,182,.25) 200deg,
+    transparent 360deg
+  );
+  filter: blur(16px);
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+.card:hover::after { opacity: .55; }
+
+/* --- Nav active underline stays your colors but with a soft slide --- */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -2px; height: 2px;
+  background: linear-gradient(90deg, var(--tertiary), var(--secondary), var(--primary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after { transform: scaleX(1); }
+
+/* --- Respect reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .revealed, .card, .scroll-up { 
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
