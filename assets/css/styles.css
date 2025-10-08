@@ -298,4 +298,20 @@ footer{
     transform: none !important;
   }
 }
+/* Keep anchors from hiding under sticky nav */
+.section { scroll-margin-top: 84px; }
+
+/* Crisper keyboard focus (uses your existing colors) */
+.nav-link:focus-visible,
+.chip:focus-visible,
+.input-field:focus-visible,
+.contact textarea:focus-visible,
+.submit-btn:focus-visible {
+  outline: 3px solid var(--tertiary);
+  outline-offset: 2px;
+  border-color: var(--tertiary);
+}
+
+/* Smooth show/hide for scroll-to-top */
+#scroll-up { opacity: 0; pointer-events: none; transition: opacity .25s ease; }
 
