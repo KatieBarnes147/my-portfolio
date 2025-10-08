@@ -143,4 +143,133 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 })();
+// === Cursor Sparkles (subtle, performance-safe) ===
+(() => {
+  const isTouch = matchMedia('(pointer: coarse)').matches || !matchMedia('(hover: hover)').matches;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (isTouch || reduce) return;
+
+  const COLORS = ['var(--tertiary)', 'var(--secondary)', 'var(--primary)'];
+  const MAX_SPARKS = 100;       // hard cap in DOM
+  const SPAWN_PER_FRAME = 2;    // how many to spawn while moving
+  const MIN_SPEED = 0.5;        // px/ms
+  const MAX_SPEED = 1.3;        // px/ms
+
+  const sparks = [];
+  let lastX = innerWidth / 2, lastY = innerHeight / 2;
+  let lastMoveTime = performance.now();
+  let prevTime = performance.now();
+  let moving = false;
+  let angle = 0;
+
+  class Spark {
+    constructor() {
+      this.el = document.createElement('span');
+      this.el.className = 'cursor-spark';
+      this.reset();
+      document.body.appendChild(this.el);
+    }
+    reset() {
+      this.active = false;
+      this.life = 0;
+      this.duration = 800; // ms
+      this.x = 0; this.y = 0;
+      this.vx = 0; this.vy = 0;
+      this.size = 4;
+      this.color = COLORS[0];
+      this.el.style.opacity = 0;
+    }
+    spawn(x, y, a) {
+      this.active = true;
+      this.duration = 600 + Math.random() * 450; // 0.6–1.05s
+      this.life = this.duration;
+      this.size = 3 + Math.random() * 4;
+      const speed = MIN_SPEED + Math.random() * (MAX_SPEED - MIN_SPEED);
+      const spread = (Math.random() - 0.5) * 0.7; // radians variation
+      const rad = a + spread;
+
+      this.vx = Math.cos(rad) * speed;
+      this.vy = Math.sin(rad) * speed;
+      this.x = x;
+      this.y = y;
+      this.color = COLORS[(Math.random() * COLORS.length) | 0];
+
+      this.el.style.background = this.color;
+      this.el.style.boxShadow = `0 0 10px ${this.color}, 0 0 18px ${this.color}`;
+      this.el.style.width = this.el.style.height = `${this.size}px`;
+      this.el.style.opacity = 1;
+    }
+    update(dt) {
+      if (!this.active) return;
+      this.life -= dt;
+      if (this.life <= 0) {
+        this.active = false;
+        this.el.style.opacity = 0;
+        return;
+      }
+      // move
+      this.x += this.vx * dt;
+      this.y += this.vy * dt;
+
+      // ease out (shrink + fade)
+      const t = this.life / this.duration;                  // 1 -> 0
+      const scale = 0.8 * t + 0.2;                          // keep a tiny dot at end
+      this.el.style.opacity = Math.min(1, t * 1.1);
+      this.el.style.transform = `translate3d(${this.x - this.size / 2}px, ${this.y - this.size / 2}px, 0) scale(${scale})`;
+    }
+  }
+
+  // Pool
+  for (let i = 0; i < MAX_SPARKS; i++) sparks.push(new Spark());
+  function getInactiveSpark() {
+    for (let i = 0; i < sparks.length; i++) {
+      if (!sparks[i].active) return sparks[i];
+    }
+    return null;
+  }
+
+  // Track movement
+  window.addEventListener('mousemove', (e) => {
+    const now = performance.now();
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+    angle = Math.atan2(dy, dx) || angle;
+
+    lastX = e.clientX; lastY = e.clientY;
+    lastMoveTime = now;
+    moving = true;
+
+    // spawn a few right away for crispness
+    for (let i = 0; i < SPAWN_PER_FRAME; i++) {
+      const s = getInactiveSpark();
+      if (!s) break;
+      s.spawn(lastX, lastY, angle);
+    }
+  });
+
+  // RAF loop
+  function tick(now) {
+    const dt = Math.min(34, now - prevTime); // clamp delta (ms)
+    prevTime = now;
+
+    // continuously sprinkle while moving
+    if (moving && (now - lastMoveTime) < 120) {
+      for (let i = 0; i < 1; i++) {
+        const s = getInactiveSpark();
+        if (!s) break;
+        s.spawn(lastX, lastY, angle);
+      }
+    } else {
+      moving = false;
+    }
+
+    // update sparks
+    for (let i = 0; i < sparks.length; i++) {
+      sparks[i].update(dt);
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+
 
