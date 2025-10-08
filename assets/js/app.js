@@ -77,3 +77,70 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   sections.forEach((s) => io.observe(s));
 });
+// === Fancy Cursor (desktop only) ===
+(() => {
+  const isTouch = window.matchMedia('(pointer: coarse)').matches || !window.matchMedia('(hover: hover)').matches;
+  if (isTouch) return; // skip on touch devices
+
+  // Create elements
+  const outer = document.createElement('div');
+  outer.className = 'cursor-outer';
+  const inner = document.createElement('div');
+  inner.className = 'cursor-inner';
+  document.body.append(outer, inner);
+
+  // Lerp helpers (smooth follow)
+  const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+  let outerX = mouseX, outerY = mouseY;
+  let innerX = mouseX, innerY = mouseY;
+
+  function animate() {
+    outerX = lerp(outerX, mouseX, 0.15);
+    outerY = lerp(outerY, mouseY, 0.15);
+    innerX = lerp(innerX, mouseX, 0.35);
+    innerY = lerp(innerY, mouseY, 0.35);
+
+    outer.style.transform = `translate3d(${outerX}px, ${outerY}px, 0)`;
+    inner.style.transform = `translate3d(${innerX}px, ${innerY}px, 0)`;
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // visibility + press
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    outer.classList.remove('cursor--hidden');
+    inner.classList.remove('cursor--hidden');
+  });
+  window.addEventListener('mouseenter', () => {
+    outer.classList.remove('cursor--hidden');
+    inner.classList.remove('cursor--hidden');
+  });
+  window.addEventListener('mouseleave', () => {
+    outer.classList.add('cursor--hidden');
+    inner.classList.add('cursor--hidden');
+  });
+  window.addEventListener('mousedown', () => {
+    outer.classList.add('is-active');
+    inner.classList.add('is-active');
+  });
+  window.addEventListener('mouseup', () => {
+    outer.classList.remove('is-active');
+    inner.classList.remove('is-active');
+  });
+
+  // Enlarge over interactive things
+  const hoverTargets = document.querySelectorAll('a, button, .btn, .chip, .card');
+  hoverTargets.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      outer.classList.add('is-hover'); inner.classList.add('is-hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      outer.classList.remove('is-hover'); inner.classList.remove('is-hover');
+    });
+  });
+})();
+
