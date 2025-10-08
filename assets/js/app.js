@@ -1,93 +1,79 @@
 // assets/js/app.js
-(() => {
-  const nav = document.querySelector('nav');
-  const burger = document.getElementById('burger-menu');
-  const navList = document.querySelector('.navigation');
-  const links = Array.from(document.querySelectorAll('.nav-link'));
-  const scrollUp = document.getElementById('scroll-up');
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== Mobile nav toggle =====
+  const nav = document.querySelector(".navigation");
+  const burger = document.getElementById("burger-menu");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-  /* ---------- Mobile nav toggle ---------- */
   const closeNav = () => {
-    navList?.classList.remove('show');
-    burger?.setAttribute('aria-expanded', 'false');
+    nav.classList.remove("show");
+    burger?.setAttribute("aria-expanded", "false");
   };
-  burger?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const open = !navList.classList.contains('show');
-    navList.classList.toggle('show');
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  // Close when clicking a nav link (helpful on mobile)
-  links.forEach((a) => a.addEventListener('click', () => closeNav()));
-  // Close on outside click
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && navList.classList.contains('show')) closeNav();
-  });
-  // Close on ESC
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeNav();
+
+  burger?.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("show");
+    burger.setAttribute("aria-expanded", String(isOpen));
   });
 
-  /* ---------- Scroll-to-top visibility ---------- */
-  const toggleScrollUp = () => {
-    if (!scrollUp) return;
-    if (window.scrollY > 500) scrollUp.classList.add('show');
-    else scrollUp.classList.remove('show');
+  // Close menu when clicking a link (mobile) or pressing Esc
+  navLinks.forEach((a) =>
+    a.addEventListener("click", () => {
+      closeNav();
+    })
+  );
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeNav();
+  });
+
+  // ===== Scroll-to-top button =====
+  const toTopBtn = document.getElementById("scroll-up");
+  const showTopBtn = () => {
+    if (!toTopBtn) return;
+    const show = window.scrollY > 400;
+    toTopBtn.style.opacity = show ? "1" : "0";
+    toTopBtn.style.pointerEvents = show ? "auto" : "none";
   };
-  toggleScrollUp();
-  window.addEventListener('scroll', toggleScrollUp);
-  scrollUp?.addEventListener('click', () =>
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+  showTopBtn();
+  window.addEventListener("scroll", () => requestAnimationFrame(showTopBtn));
+  toTopBtn?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // ===== Scrollspy + URL hash sync (no color changes) =====
+  const sections = document.querySelectorAll("section[id]");
+  const linkFor = (id) =>
+    document.querySelector(`.nav-link[href="#${CSS.escape(id)}"]`);
+
+  let suppressHash = false; // avoid hash flicker on programmatic scroll
+  navLinks.forEach((a) =>
+    a.addEventListener("click", () => {
+      suppressHash = true;
+      setTimeout(() => (suppressHash = false), 800);
+    })
   );
 
-  /* ---------- Smooth scroll for in-page links ---------- */
-  links.forEach((link) => {
-    const href = link.getAttribute('href');
-    if (!href || !href.startsWith('#')) return;
-    link.addEventListener('click', (e) => {
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
+  const setActive = (id) => {
+    if (!id) return;
+    navLinks.forEach((a) => a.classList.remove("active"));
+    const current = linkFor(id);
+    current?.classList.add("active");
 
-  /* ---------- Scrollspy: highlight current section in nav ---------- */
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-  const spy = new IntersectionObserver(
+    if (!suppressHash && id !== (location.hash || "").slice(1)) {
+      history.replaceState(null, "", `#${id}`);
+    }
+  };
+
+  const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        const id = entry.target.id;
-        const link = links.find((a) => a.getAttribute('href') === `#${id}`);
-        if (!link) return; // ignore sections without a corresponding nav link
-        if (entry.isIntersecting) {
-          links.forEach((a) => a.classList.remove('active'));
-          link.classList.add('active');
-        }
+        if (entry.isIntersecting) setActive(entry.target.id);
       });
     },
-    { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+    {
+      // section is "active" when ~60% visible
+      rootMargin: "-20% 0px -40% 0px",
+      threshold: 0.1,
+    }
   );
-  sections.forEach((sec) => spy.observe(sec));
-
-  /* ---------- Reveal-on-scroll for titles/cards ---------- */
-  const revealEls = document.querySelectorAll(
-    '.section .section-title, .section .section-subtitle, .card'
-  );
-  const revealObs = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-  revealEls.forEach((el) => {
-    el.classList.add('reveal');
-    revealObs.observe(el);
-  });
-})();
+  sections.forEach((s) => io.observe(s));
+});
