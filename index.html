@@ -30,53 +30,6 @@
 
   <!-- Animate CSS CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  
-  <style>
-    /* Skills section pink matches Resume button */
-    #skills {
-      background-color: #FF4D6D; /* exact pink from Resume button */
-      color: #fff;
-      padding: 4rem 2rem;
-    }
-    #skills .cards .card {
-      background-color: #fff;
-      color: #000;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    #skills .cards .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-
-    /* Education section styling */
-    #education {
-      background-color: #f9f9f9;
-      padding: 4rem 2rem;
-    }
-    #education .cards .card {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    #education .cards .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    #education .card h3 {
-      margin-bottom: 0.5rem;
-      color: #FF4D6D; /* pink accent for headings */
-    }
-    #education .card p, #education .card ul {
-      margin: 0.25rem 0;
-    }
-  </style>
 </head>
 
 <body>
@@ -89,9 +42,9 @@
   <nav>
     <h1 class="logo"><a href="#about" aria-label="Go to top">KATIE BARNES</a></h1>
     <ul class="navigation">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#background" class="nav-link">About</a></li>
       <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
       <li class="hide-on-mobile">
@@ -141,7 +94,7 @@
     </div>
   </section>
 
-  <!-- Background Section -->
+  <!-- My Background -->
   <section id="background" class="section">
     <h2 class="section-title">My Background</h2>
     <p>
@@ -165,7 +118,56 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <h2 class="section-title">Education & Training</h2>
+
+    <div class="education-entry">
+      <h3>Merrimack College, North Andover, MA</h3>
+      <p><strong>Master of Computer Science & Software Engineering</strong> — Aug 2025</p>
+      <ul>
+        <li>Key Projects: SIEM log analysis, threat modeling, secure coding, environment hardening, SQL/database security</li>
+      </ul>
+    </div>
+
+    <div class="education-entry">
+      <h3>Boston University, Boston, MA</h3>
+      <p><strong>Graduate Certificate in Cyber Investigations & Cybersecurity</strong> — Dec 2021</p>
+      <ul>
+        <li>Hands-on labs: Incident response, network security, log analysis, vulnerability scanning, digital forensics</li>
+        <li>Notable Project: Forensic examinations of digital devices using EnCase software in Virtual Security Lab</li>
+      </ul>
+    </div>
+
+    <div class="education-entry">
+      <h3>University of Massachusetts Lowell, Lowell, MA</h3>
+      <p><strong>Bachelor of Science in Criminal Justice</strong> — Aug 2020</p>
+      <ul>
+        <li>Focus Areas: Criminal Investigation, Evidence Handling, Cybercrime Awareness</li>
+      </ul>
+    </div>
+
+    <div class="education-entry">
+      <h3>Bunker Hill Community College, Charlestown, MA</h3>
+      <p><strong>Associate of Science in Criminal Justice</strong> — Dec 2016</p>
+      <ul>
+        <li>Relevant Coursework: Cyber Crime, Forensics (Lab), Criminal Investigation, Criminal Law</li>
+        <li>Law Enforcement Certificate — Policing course completed</li>
+      </ul>
+    </div>
+
+    <div class="education-entry">
+      <h3>Additional Training</h3>
+      <ul>
+        <li>AT&T 2025 Technology Academy — 5G, Cloud, Network Troubleshooting, Security Concepts — Dec 2025</li>
+        <li>CompTIA Security+ Training — uCertify Labs via Boston University — Dec 2021</li>
+        <li>Cyber Investigations Virtual Labs — uCertify — Dec 2021</li>
+        <li>CompTIA Security+ Exam — In Progress</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
   <section id="skills" class="section">
     <h2 class="section-title">Skills</h2>
     <div class="cards">
@@ -197,57 +199,7 @@
     </div>
   </section>
 
-  <!-- Education Section -->
-  <section id="education" class="section">
-    <h2 class="section-title">Education & Training</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Merrimack College</h3>
-        <p><strong>Master of Computer Science & Software Engineering</strong> — Aug 2025</p>
-        <ul>
-          <li>Key Projects: SIEM log analysis, threat modeling, secure coding, environment hardening, SQL/database security</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Boston University</h3>
-        <p><strong>Graduate Certificate in Cybercrime Investigations & Cybersecurity</strong> — Dec 2021</p>
-        <ul>
-          <li>Hands-on labs: Incident response, network security, log analysis, vulnerability scanning, digital forensics</li>
-          <li>Notable Project: Conducted forensic examinations of digital devices using EnCase software in the Virtual Security Lab</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>University of Massachusetts Lowell</h3>
-        <p><strong>Bachelor of Science in Criminal Justice</strong> — Aug 2020</p>
-        <ul>
-          <li>Focus Areas: Criminal Investigation, Evidence Handling, Cybercrime Awareness</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Bunker Hill Community College</h3>
-        <p><strong>Associate of Science in Criminal Justice</strong> — Dec 2016</p>
-        <ul>
-          <li>Law Enforcement Certificate — Policing course completed</li>
-          <li>Relevant Coursework: Cyber Crime, Forensics (Lab), Criminal Investigation, Criminal Law</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Additional Training</h3>
-        <ul>
-          <li>AT&T 2025 Technology Academy — 5G, Cloud, Network Troubleshooting, Security Concepts — Dec 2025</li>
-          <li>CompTIA Security+ Training (uCertify Labs via Boston University) — Dec 2021</li>
-          <li>Cyber Investigations Virtual Labs (uCertify) — Dec 2021</li>
-          <li>CompTIA Security+ Exam — In progress</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
+  <!-- PROJECTS -->
   <section id="projects" class="section">
     <h2 class="section-title">Projects</h2>
     <p class="section-subtitle">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
@@ -289,7 +241,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section class="contact section" id="contact">
     <h2 class="section-title">Get In Touch With Me</h2>
     <div class="contact-form-container">
@@ -343,6 +295,3 @@
 
 </body>
 </html>
-
-
-
