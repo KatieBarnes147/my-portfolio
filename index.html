@@ -30,6 +30,29 @@
 
   <!-- Animate CSS CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    /* Resume button updated pink */
+    .btn-resume {
+      background: linear-gradient(135deg, var(--secondary), #ff7ebf);
+      color: #1b1030;
+      padding: 0.6em 1.4em;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-resume:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Education spacing */
+    .education-item {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -48,7 +71,7 @@
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
       <li class="hide-on-mobile">
-        <a class="btn btn-resume" href="Portfolio-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn-resume" href="Portfolio_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </li>
     </ul>
     <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation">
@@ -89,12 +112,12 @@
 
       <div class="cta-wrap">
         <a class="btn btn-primary" href="#projects">View Projects</a>
-        <a class="btn btn-outline" href="assets/Katie_Barnes_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn-resume" href="Portfolio_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </section>
 
-  <!-- MY BACKGROUND -->
+  <!-- Background -->
   <section id="background" class="section">
     <h2 class="section-title">My Background</h2>
     <p>
@@ -102,9 +125,7 @@
       <em>secure design</em> and <em>practical delivery</em>.
     </p>
     <p>
-      I hold an <strong>M.S. in Computer Science & Software Engineering</strong> (2025) and a
-      <strong>Graduate Certificate in Cybersecurity & Cyber Investigations</strong>. My hands-on work spans
-      secure application development, digital forensics, and incident response. I’ve built full-stack projects with
+      My hands-on work spans secure application development, digital forensics, and incident response. I’ve built full-stack projects with
       Python, Java, React, and SQL, and performed forensic analysis using Autopsy, FTK Imager, and OSForensics.
     </p>
     <p>
@@ -118,60 +139,45 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- Education -->
   <section id="education" class="section">
     <h2 class="section-title">Education & Training</h2>
 
-    <div class="education-entry" style="margin-bottom: 2rem;">
-      <h3 style="color: #ff6b81;">Merrimack College, North Andover, MA</h3>
-      <p><strong>Master of Computer Science & Software Engineering</strong> — Aug 2025</p>
-      <ul>
-        <li>Key Projects: SIEM log analysis, threat modeling, secure coding, environment hardening, SQL/database security</li>
-      </ul>
+    <div class="education-item">
+      <strong>Merrimack College, North Andover, MA</strong><br>
+      Master of Computer Science & Software Engineering — Aug 2025
     </div>
 
-    <div class="education-entry" style="margin-bottom: 2rem;">
-      <h3 style="color: #ff6b81;">Boston University, Boston, MA</h3>
-      <p><strong>Graduate Certificate in Cyber Investigations & Cybersecurity</strong> — Dec 2021</p>
-      <ul>
-        <li>Hands-on labs: Incident response, network security, log analysis, vulnerability scanning, digital forensics</li>
-        <li>Notable Project: Forensic examinations of digital devices using EnCase software in Virtual Security Lab</li>
-      </ul>
+    <div class="education-item">
+      <strong>Boston University, Boston, MA</strong><br>
+      Graduate Certificate in Cyber Investigations & Cybersecurity — Dec 2021
     </div>
 
-    <div class="education-entry" style="margin-bottom: 2rem;">
-      <h3 style="color: #ff6b81;">University of Massachusetts Lowell, Lowell, MA</h3>
-      <p><strong>Bachelor of Science in Criminal Justice</strong> — Aug 2020</p>
-      <ul>
-        <li>Focus Areas: Criminal Investigation, Evidence Handling, Cybercrime Awareness</li>
-      </ul>
+    <div class="education-item">
+      <strong>University of Massachusetts Lowell, Lowell, MA</strong><br>
+      Bachelor of Science in Criminal Justice — Aug 2020
     </div>
 
-    <div class="education-entry" style="margin-bottom: 2rem;">
-      <h3 style="color: #ff6b81;">Bunker Hill Community College, Charlestown, MA</h3>
-      <p><strong>Associate of Science in Criminal Justice</strong> — Dec 2016</p>
-      <ul>
-        <li>Relevant Coursework: Cyber Crime, Forensics (Lab), Criminal Investigation, Criminal Law</li>
-        <li>Law Enforcement Certificate — Policing course completed</li>
-      </ul>
+    <div class="education-item">
+      <strong>Bunker Hill Community College, Charlestown, MA</strong><br>
+      Associate of Science in Criminal Justice — Dec 2016<br>
+      Law Enforcement Certificate — 2016
     </div>
 
-    <div class="education-entry">
-      <h3 style="color: #ff6b81;">Additional Training</h3>
-      <ul>
-        <li>AT&T 2025 Technology Academy — 5G, Cloud, Network Troubleshooting, Security Concepts — Dec 2025</li>
-        <li>CompTIA Security+ Training — uCertify Labs via Boston University — Dec 2021</li>
-        <li>Cyber Investigations Virtual Labs — uCertify — Dec 2021</li>
-        <li>CompTIA Security+ Exam — In Progress</li>
-      </ul>
+    <div class="education-item">
+      <strong>Additional Training:</strong><br>
+      AT&T 2025 Technology Academy — 5G, Cloud, Network Troubleshooting, Security Concepts<br>
+      CompTIA Security+ Training | uCertify Labs via Boston University — Dec 2021<br>
+      Cyber Investigations Virtual Labs | uCertify — Dec 2021<br>
+      CompTIA Security+ Exam — In Progress
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- Skills -->
   <section id="skills" class="section">
     <h2 class="section-title">Skills</h2>
     <div class="cards">
-      <article class="card" style="background-color: #ff6b81;">
+      <article class="card">
         <h3>Languages & Frameworks</h3>
         <ul>
           <li>Python (advanced), Java (intermediate), JavaScript/TypeScript</li>
@@ -179,7 +185,7 @@
         </ul>
       </article>
 
-      <article class="card" style="background-color: #ff6b81;">
+      <article class="card">
         <h3>Security & Forensics</h3>
         <ul>
           <li>Autopsy, FTK Imager, OSForensics</li>
@@ -188,7 +194,7 @@
         </ul>
       </article>
 
-      <article class="card" style="background-color: #ff6b81;">
+      <article class="card">
         <h3>DevOps & Tooling</h3>
         <ul>
           <li>Git/GitHub, GitLab CI, Docker (basics)</li>
@@ -199,7 +205,7 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- Projects -->
   <section id="projects" class="section">
     <h2 class="section-title">Projects</h2>
     <p class="section-subtitle">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
@@ -294,4 +300,3 @@
   <div class="cursor-inner"></div>
 </body>
 </html>
-
