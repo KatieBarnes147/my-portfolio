@@ -43,6 +43,7 @@
     <h1 class="logo"><a href="#about" aria-label="Go to top">KATIE BARNES</a></h1>
     <ul class="navigation">
       <li><a href="#background" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -93,154 +94,208 @@
   </div>
 </section>
 
-  <!-- MY BACKGROUND -->
-  <section id="background" class="section">
-    <h2 class="section-title">My Background</h2>
-    <p>
-      I’m a <strong>Software Engineer</strong> and <strong>Cybersecurity Specialist</strong> who bridges the gap between
-      <em>secure design</em> and <em>practical delivery</em>.
-    </p>
-    <p>
-      I hold an <strong>M.S. in Computer Science & Software Engineering</strong> (2025) and a
-      <strong>Graduate Certificate in Cybersecurity & Cyber Investigations</strong>. My hands-on work spans
-      secure application development, digital forensics, and incident response. I’ve built full-stack projects with
-      Python, Java, React, and SQL, and performed forensic analysis using Autopsy, FTK Imager, and OSForensics.
-    </p>
-    <p>
-      I’m driven by real-world impact — optimizing systems, investigating digital evidence, and designing with a
-      security-first mindset. Explore my work below, visit my GitHub, and check out my digital forensics portfolio.
-    </p>
-    <div class="chips">
-      <a class="chip" href="https://bu.digication.com/katie-barnes/home" target="_blank" rel="noopener">
-        Boston University Forensics Portfolio
-      </a>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2 class="section-title">Skills</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Languages & Frameworks</h3>
-        <ul>
-          <li>Python (advanced), Java (intermediate), JavaScript/TypeScript</li>
-          <li>React, Node.js, SQL (PostgreSQL/MySQL), REST APIs</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Security & Forensics</h3>
-        <ul>
-          <li>Autopsy, FTK Imager, OSForensics</li>
-          <li>Incident Response, Chain of Custody, Evidence Handling</li>
-          <li>Secure Coding, Basic Threat Modeling, Log Analysis</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>DevOps & Tooling</h3>
-        <ul>
-          <li>Git/GitHub, GitLab CI, Docker (basics)</li>
-          <li>Linux, Bash, VS Code, Postman</li>
-          <li>Cloud basics (AWS: S3/Lambda/EC2 concepts)</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Projects</h2>
-    <p class="section-subtitle">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
-
-    <div class="cards projects-grid">
-      <article class="card project">
-        <h3>Event Seat Booking (gRPC + Python)</h3>
-        <p>
-          <strong>Challenge:</strong> Prevent double-booking in a concurrent environment.<br />
-          <strong>Approach:</strong> Python gRPC service with server-side locks and idempotent ops; unit tests & profiling.<br />
-          <strong>Result:</strong> Eliminated race conditions; <em>0 booking conflicts</em> in stress tests.
-        </p>
-      </article>
-
-      <article class="card project">
-        <h3>Weather Dashboard (React + Maps)</h3>
-        <p>
-          <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.<br />
-          <strong>Approach:</strong> React + Vite app with Google Maps click-to-query; caching & input validation.<br />
-          <strong>Result:</strong> <em>Sub-second</em> map interactions; deployed to Pages.
-        </p>
-        <div class="project-links">
-          <a class="btn btn-sm" href="https://github.com/KatieBarnes147/Google-Weather-Dashboard/blob/main/index.html" target="_blank" rel="noopener">Code</a>
-          <a class="btn btn-sm btn-outline" href="https://katiebarnes147.github.io/Google-Weather-Dashboard/" target="_blank" rel="noopener">Live Demo</a>
-        </div>
-      </article>
-
-      <article class="card project">
-        <h3>Digital Forensics Lab (Autopsy/FTK/OSF)</h3>
-        <p>
-          <strong>Challenge:</strong> Acquire/analyze disk images while preserving chain of custody.<br />
-          <strong>Approach:</strong> FTK Imager for acquisition; Autopsy & OSForensics for artifact analysis; documented handling.<br />
-          <strong>Result:</strong> Comprehensive report & repeatable workflow; <em>key artifacts</em> and timeline.
-        </p>
-        <div class="project-links">
-          <a class="btn btn-sm" href="https://github.com/KatieBarnes147/digital-forensics-multi-tool-lab" target="_blank" rel="noopener">Report/Portfolio</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact section" id="contact">
-    <h2 class="section-title">Get In Touch With Me</h2>
-    <div class="contact-form-container">
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xgeqkgql" method="POST">
-          <div class="form-control">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field" required />
-          </div>
-          <div class="form-control">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field" required />
-          </div>
-          <div class="form-control">
-            <label for="message">Message</label>
-            <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message" class="input-field" required></textarea>
-          </div>
-          <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Socials -->
-  <div class="socials" aria-label="Social links">
-    <a href="https://www.linkedin.com/in/katie-barnes-372028134/" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <img src="assets/icons/icons8-linkedin-circled.gif" alt="LinkedIn" loading="lazy" class="socicon" />
-    </a>
-    <a href="https://github.com/KatieBarnes147" target="_blank" rel="noopener" aria-label="GitHub">
-      <img src="assets/icons/icons8-github.gif" alt="GitHub" class="socicon" />
+<!-- MY BACKGROUND -->
+<section id="background" class="section">
+  <h2 class="section-title">My Background</h2>
+  <p>
+    I’m a <strong>Software Engineer</strong> and <strong>Cybersecurity Specialist</strong> who bridges the gap between
+    <em>secure design</em> and <em>practical delivery</em>.
+  </p>
+  <p>
+    I hold an <strong>M.S. in Computer Science & Software Engineering</strong> (2025) and a
+    <strong>Graduate Certificate in Cybersecurity & Cyber Investigations</strong>. My hands-on work spans
+    secure application development, digital forensics, and incident response. I’ve built full-stack projects with
+    Python, Java, React, and SQL, and performed forensic analysis using Autopsy, FTK Imager, and OSForensics.
+  </p>
+  <p>
+    I’m driven by real-world impact — optimizing systems, investigating digital evidence, and designing with a
+    security-first mindset. Explore my work below, visit my GitHub, and check out my digital forensics portfolio.
+  </p>
+  <div class="chips">
+    <a class="chip" href="https://bu.digication.com/katie-barnes/home" target="_blank" rel="noopener">
+      Boston University Forensics Portfolio
     </a>
   </div>
+</section>
 
-  <!-- Scroll to top -->
-  <button class="scroll-up" id="scroll-up" aria-label="Scroll to top">
-    <img src="assets/icons/icons8-upward-arrow.gif" class="socicon up-arrow" alt="" />
-  </button>
+<!-- EDUCATION & TRAINING -->
+<section id="education" class="section">
+  <h2 class="section-title">Education & Training</h2>
+  <p class="section-subtitle">All degrees, certificates, and professional training I’ve completed.</p>
 
-  <!-- Footer -->
-  <footer>
-    <p class="copy">&copy; Copyright 2025</p>
-    <p class="copy">Built with &#x2661; by <a href="#about">Katie Barnes</a></p>
-  </footer>
+  <div class="cards projects-grid">
 
-  <!-- Scripts -->
-  <script src="assets/js/app.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <div class="cursor-outer"></div>
+    <article class="card">
+      <h3>M.S. in Computer Science & Software Engineering</h3>
+      <p><strong>Merrimack College | North Andover, MA – Aug 2025</strong></p>
+      <ul>
+        <li>Key Projects: SIEM log analysis, threat modeling, secure coding, environment hardening, SQL/database security</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Graduate Certificate in Cybercrime Investigations & Cybersecurity</h3>
+      <p><strong>Boston University | Boston, MA – Dec 2021</strong></p>
+      <ul>
+        <li>Hands-on labs: Incident response, network security, log analysis, vulnerability scanning, digital forensics</li>
+        <li>Notable Project: Forensic examinations using <strong>EnCase</strong> in the Virtual Security Lab</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Bachelor of Science in Criminal Justice</h3>
+      <p><strong>University of Massachusetts Lowell | Lowell, MA – Aug 2020</strong></p>
+      <ul>
+        <li>Focus Areas: Criminal Investigation, Evidence Handling, Cybercrime Awareness</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Associate of Science in Criminal Justice</h3>
+      <p><strong>Bunker Hill Community College | Charlestown, MA – Dec 2016</strong></p>
+      <ul>
+        <li>Relevant Coursework: Cyber Crime, Forensics (Lab), Criminal Investigation, Criminal Law</li>
+        <li>Law Enforcement Certificate — Completed policing course in 2016</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Additional Training & Certifications</h3>
+      <ul>
+        <li>AT&T Technology Academy (2025) — 5G, Cloud, Network Troubleshooting, Security Concepts</li>
+        <li>CompTIA Security+ Training via uCertify Labs (2021)</li>
+        <li>Cyber Investigations Virtual Labs via uCertify (2021)</li>
+        <li>CompTIA Security+ Exam — In Progress</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2 class="section-title">Skills</h2>
+  <div class="cards">
+    <article class="card">
+      <h3>Languages & Frameworks</h3>
+      <ul>
+        <li>Python (advanced), Java (intermediate), JavaScript/TypeScript</li>
+        <li>React, Node.js, SQL (PostgreSQL/MySQL), REST APIs</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Security & Forensics</h3>
+      <ul>
+        <li>Autopsy, FTK Imager, OSForensics</li>
+        <li>Incident Response, Chain of Custody, Evidence Handling</li>
+        <li>Secure Coding, Basic Threat Modeling, Log Analysis</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>DevOps & Tooling</h3>
+      <ul>
+        <li>Git/GitHub, GitLab CI, Docker (basics)</li>
+        <li>Linux, Bash, VS Code, Postman</li>
+        <li>Cloud basics (AWS: S3/Lambda/EC2 concepts)</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-subtitle">A selection of hands-on work. Each card highlights the challenge, approach, and result.</p>
+
+  <div class="cards projects-grid">
+    <article class="card project">
+      <h3>Event Seat Booking (gRPC + Python)</h3>
+      <p>
+        <strong>Challenge:</strong> Prevent double-booking in a concurrent environment.<br />
+        <strong>Approach:</strong> Python gRPC service with server-side locks and idempotent ops; unit tests & profiling.<br />
+        <strong>Result:</strong> Eliminated race conditions; <em>0 booking conflicts</em> in stress tests.
+      </p>
+    </article>
+
+    <article class="card project">
+      <h3>Weather Dashboard (React + Maps)</h3>
+      <p>
+        <strong>Challenge:</strong> Combine geolocation with weather APIs for an interactive UI.<br />
+        <strong>Approach:</strong> React + Vite app with Google Maps click-to-query; caching & input validation.<br />
+        <strong>Result:</strong> <em>Sub-second</em> map interactions; deployed to Pages.
+      </p>
+      <div class="project-links">
+        <a class="btn btn-sm" href="https://github.com/KatieBarnes147/Google-Weather-Dashboard/blob/main/index.html" target="_blank" rel="noopener">Code</a>
+        <a class="btn btn-sm btn-outline" href="https://katiebarnes147.github.io/Google-Weather-Dashboard/" target="_blank" rel="noopener">Live Demo</a>
+      </div>
+    </article>
+
+    <article class="card project">
+      <h3>Digital Forensics Lab (Autopsy/FTK/OSF)</h3>
+      <p>
+        <strong>Challenge:</strong> Acquire/analyze disk images while preserving chain of custody.<br />
+        <strong>Approach:</strong> FTK Imager for acquisition; Autopsy & OSForensics for artifact analysis; documented handling.<br />
+        <strong>Result:</strong> Comprehensive report & repeatable workflow; <em>key artifacts</em> and timeline.
+      </p>
+      <div class="project-links">
+        <a class="btn btn-sm" href="https://github.com/KatieBarnes147/digital-forensics-multi-tool-lab" target="_blank" rel="noopener">Report/Portfolio</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact section" id="contact">
+  <h2 class="section-title">Get In Touch With Me</h2>
+  <div class="contact-form-container">
+    <div class="contact-form">
+      <form action="https://formspree.io/f/xgeqkgql" method="POST">
+        <div class="form-control">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field" required />
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field" required />
+        </div>
+        <div class="form-control">
+          <label for="message">Message</label>
+          <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message" class="input-field" required></textarea>
+        </div>
+        <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Socials -->
+<div class="socials" aria-label="Social links">
+  <a href="https://www.linkedin.com/in/katie-barnes-372028134/" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <img src="assets/icons/icons8-linkedin-circled.gif" alt="LinkedIn" loading="lazy" class="socicon" />
+  </a>
+  <a href="https://github.com/KatieBarnes147" target="_blank" rel="noopener" aria-label="GitHub">
+    <img src="assets/icons/icons8-github.gif" alt="GitHub" class="socicon" />
+  </a>
+</div>
+
+<!-- Scroll to top -->
+<button class="scroll-up" id="scroll-up" aria-label="Scroll to top">
+  <img src="assets/icons/icons8-upward-arrow.gif" class="socicon up-arrow" alt="" />
+</button>
+
+<!-- Footer -->
+<footer>
+  <p class="copy">&copy; Copyright 2026</p>
+  <p class="copy">Built with &#x2661; by <a href="#about">Katie Barnes</a></p>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/app.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<div class="cursor-outer"></div>
 <div class="cursor-inner"></div>
 
 </body>
